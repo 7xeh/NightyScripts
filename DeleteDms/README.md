@@ -1,5 +1,7 @@
 # Nighty Personal Message Cleaner
 
+[← Back to Nighty Scripts](../README.md)
+
 The **Personal Message Cleaner** script adds both a Nighty UI tab and a legacy `dpm` command that delete **your own** Discord messages across servers, group chats, and direct messages.
 
 ## Features
@@ -25,5 +27,5 @@ Type `dpm 50` (or `dpm all`) inside any channel/DM/group to purge your own messa
 ## Notes
 
 - Nighty can only delete messages sent by your account.
-- Respect Discords Terms of Service and local regulations.
+- Respect Discord’s Terms of Service and local regulations.
 - Massive deletions may take time because of API rate limits.
