@@ -6,7 +6,7 @@ A small collection of scripts intended to be loaded into **Nighty**.
 
 ## Scripts
 
-- [DeleteDms/](DeleteDms/) — "Personal Message Cleaner" (deletes **your own** Discord messages from a server channel/thread, group chat, or DM). See [DeleteDms/README.md](DeleteDms/README.md).
+- [DeleteDms/](DeleteDms/) — "Message Cleaner" (deletes **your own** Discord messages from a server channel/thread, group chat, or DM). See [DeleteDms/README.md](DeleteDms/README.md).
 
 ## Getting started
 

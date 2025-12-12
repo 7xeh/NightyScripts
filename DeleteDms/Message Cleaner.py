@@ -1,6 +1,6 @@
 @nightyScript(
-    name="Personal Message Cleaner",
-    author="Nighty Community",
+    name="Message Cleaner",
+    author="7xeh",
     description="Delete your own Discord messages from servers, groups, or DMs with UI helpers and the dpm command.",
     usage="dpm <amount|all>"
 )
@@ -266,10 +266,10 @@ def delete_personal_messages():
     settings = load_settings()
     ui_state = {"running": False}
 
-    cleaner_tab = Tab(name="Personal Cleaner", title="Delete Personal Messages", icon="trash")
+    cleaner_tab = Tab(name="Message Cleaner", title="Delete Messages", icon="trash")
     layout = cleaner_tab.create_container(type="columns")
     main_card = layout.create_card(gap=3)
-    main_card.create_ui_element(UI.Text, content="Personal Message Cleaner", size="xl", weight="bold")
+    main_card.create_ui_element(UI.Text, content="Message Cleaner", size="xl", weight="bold")
     main_card.create_ui_element(
         UI.Text,
         content="Delete your own messages across servers, DMs, and groups. Respect Discord's ToS and only remove your content.",
@@ -356,12 +356,12 @@ def delete_personal_messages():
     async def delete_personal_messages_command(ctx, *, argument: str = ""):
         await ctx.message.delete()
         limit = parse_amount_argument(argument)
-        notify = await ctx.send("Personal Cleaner: starting…", silent=True)
+        notify = await ctx.send("Message Cleaner: starting…", silent=True)
 
         async def hook(message: str):
-            await notify.edit(content=f"Personal Cleaner: {message}")
+            await notify.edit(content=f"Message Cleaner: {message}")
 
         _, deleted = await purge_channel(ctx.channel, limit, status_hook=hook)
-        await notify.edit(content=f"Personal Cleaner: deleted {deleted} messages.")
+        await notify.edit(content=f"Message Cleaner: deleted {deleted} messages.")
 
 delete_personal_messages()
